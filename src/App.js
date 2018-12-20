@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MainAttraction from './remainingPages/components/Card';
-import './App.css';
 
 class App extends Component {
 	render() {
