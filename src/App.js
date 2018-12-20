@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import { Container, Segment } from 'semantic-ui-react';
+import MainAttraction from './remainingPages/components/Card';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <Container>
-        <Segment textAlign='center' raised>
-          asdf
-        </Segment>
-      </Container>
-    );
-  }
+	render() {
+		return (
+			<div className="main">
+				<MainAttraction />
+			</div>
+		);
+	}
 }
 
 export default App;
