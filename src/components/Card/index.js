@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Header, Transition } from 'semantic-ui-react';
+import { Card, Header, Transition, Container } from 'semantic-ui-react';
 
 export default class MainAttraction extends Component {
 	constructor(props) {
@@ -20,8 +20,7 @@ export default class MainAttraction extends Component {
 		});
 	}
 
-	sendEmail() 
-	{
+	sendEmail() {
 		window.location = 'mailto:mmahan@pm.me';
 	}
 
@@ -38,13 +37,13 @@ export default class MainAttraction extends Component {
 						Michael Mahan
 						<Header.Subheader as="h4" content="A Developer"/>
 					</Header>
-					<div onClick={this.stopPropagation.bind(this)}>
-						<a onClick={() => this.sendEmail()}>mmahan@pm.me</ a>
-					</div>
-					<br/>
-					<div onClick={this.stopPropagation.bind(this)}>
+					<Container className='middle' onClick={this.stopPropagation.bind(this)}>
+						<a onClick={() => this.sendEmail()}>mmahan@pm.me</a>
+					</Container>
+					<br/><br/>
+					<Container className='middle' onClick={this.stopPropagation.bind(this)}>
 						<a href="https://github.com/JohnnySn0w">GitHub</a>
-					</div>
+					</Container>
 				</Card.Content>
 			);
 		}

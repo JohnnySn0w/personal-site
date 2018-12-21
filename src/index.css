@@ -11,3 +11,9 @@ div.silvered {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+div.ui.container.middle {
+  left: 50%;
+  display: inline-block;
+  width: auto;
+}

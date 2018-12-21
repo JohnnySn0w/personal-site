@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MainAttraction from './remainingPages/components/Card';
+import MainAttraction from './components/Card';
 
 class App extends Component {
 	render() {
