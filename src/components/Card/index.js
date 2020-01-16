@@ -23,6 +23,7 @@ export default class MainAttraction extends Component {
 
   sendEmail() {
     window.location = 'mailto:mmahan@pm.me';
+    return false;
   }
 
   stopPropagation(event) {
@@ -39,6 +40,7 @@ export default class MainAttraction extends Component {
             <Header.Subheader content="A Developer"/>
           </Header>
           <Container className='middle' onClick={this.stopPropagation}>
+            {/* eslint-disable-next-line */}
             <a onClick={this.sendEmail}>mmahan@pm.me</a>
           </Container>
           <br/><br/>
