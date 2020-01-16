@@ -43,7 +43,9 @@ export default class MainAttraction extends Component {
           </Container>
           <br/><br/>
           <Container className='middle' onClick={this.stopPropagation}>
-            <a href="https://github.com/JohnnySn0w">GitHub</a>
+            <a href="https://github.com/JohnnySn0w">GitHub </a>
+            ·
+            <a href="https://www.linkedin.com/in/michael-mahann/"> LinkedIn</a>
           </Container>
         </Card.Content>
       );
