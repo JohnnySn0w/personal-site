@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import 'semantic-ui-css/semantic.min.css';
+import 'react-bnb-gallery/dist/style.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
