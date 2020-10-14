@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Header, Transition, Container } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 export default class MainAttraction extends Component {
   constructor(props) {
@@ -47,7 +48,9 @@ export default class MainAttraction extends Component {
           <Container className='middle' onClick={this.stopPropagation}>
             <a href="https://github.com/JohnnySn0w">GitHub </a>
             ·
-            <a href="https://www.linkedin.com/in/michael-mahann/"> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/michael-mahann/"> LinkedIn </a>
+            ·
+            <Link to="/gallery"> Pixel Art</Link>
           </Container>
         </Card.Content>
       );
