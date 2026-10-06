@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Card, Header, Transition, Container } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
 
 export default class MainAttraction extends Component {
   constructor(props) {
@@ -40,18 +39,13 @@ export default class MainAttraction extends Component {
 						Michael Mahan
             <Header.Subheader content="A Developer"/>
           </Header>
+          {/* The back of the card is a single way in: the full site (net.mahan.io).
+              Two line-blocks are kept (link + spacer) so the card keeps its front-side size. */}
           <Container className='middle' onClick={this.stopPropagation}>
-            {/* eslint-disable-next-line */}
-            <a onClick={this.sendEmail}>mmahan@pm.me</a>
+            <a href="https://net.mahan.io">&gt;CONTINUE</a>
           </Container>
           <br/><br/>
-          <Container className='middle' onClick={this.stopPropagation}>
-            <a href="https://github.com/JohnnySn0w">GitHub </a>
-            ·
-            <a href="https://www.linkedin.com/in/michael-mahann/"> LinkedIn </a>
-            ·
-            <Link to="/gallery"> Pixel Art</Link>
-          </Container>
+          <Container className='middle'>&nbsp;</Container>
         </Card.Content>
       );
     }
