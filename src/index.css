@@ -32,3 +32,16 @@ div.ui.container.middle {
     left: 1%;
   }
 }
+
+/* Business-card proportions (3.5in x 2in = 1.75:1), Michael TG 11145. Width caps at 350px and
+   shrinks with the viewport on phones; the content sits centred in the taller face. */
+div.card > .ui.card {
+  width: min(350px, 88vw);
+  aspect-ratio: 1.75 / 1;
+  display: flex !important; /* Semantic's .visible.transition forces display:block !important */
+  flex-direction: column;
+  justify-content: center;
+}
+div.card > .ui.card > .content {
+  flex-grow: 0;
+}
