@@ -42,6 +42,17 @@ div.card > .ui.card {
   flex-direction: column;
   justify-content: center;
 }
-div.card > .ui.card > .content {
-  flex-grow: 0;
+div.card > .ui.card > .content.card-rows {
+  /* three equal rows; display needs !important over Semantic's .visible.transition */
+  display: grid !important;
+  grid-template-rows: 1fr 1fr 1fr;
+  flex-grow: 1;
+  padding: 0.6em 1em;
 }
+.card-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-row-top .ui.header { margin: 0; }
+.card-icon { display: block; image-rendering: pixelated; }
