@@ -37,7 +37,7 @@ export default class MainAttraction extends Component {
           {/* The back of the card is a single way in: the full site (net.mahan.io).
               Two line-blocks are kept (link + spacer) so the card keeps its front-side size. */}
           <Container className='middle' onClick={this.stopPropagation}>
-            <a href="https://net.mahan.io">&gt;CONTINUE</a>
+            <a href="https://net.mahan.io" style={{ display: 'inline-block', marginTop: '0.5em', fontWeight: 700 }}>&gt;CONTINUE</a>
           </Container>
           <br/><br/>
           <Container className='middle'>&nbsp;</Container>
