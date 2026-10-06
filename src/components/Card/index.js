@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Header, Transition, Container } from 'semantic-ui-react';
+import { Card, Header, Transition } from 'semantic-ui-react';
 
 export default class MainAttraction extends Component {
   constructor(props) {
@@ -27,32 +27,20 @@ export default class MainAttraction extends Component {
 
   cardContent() {
     const { flipped } = this.state;
-    if(flipped){
-      return(
-        <Card.Content textAlign='center'>
-          <Header>
-						Michael Mahan
-            <Header.Subheader content="A Developer"/>
-          </Header>
-          {/* The back of the card is a single way in: the full site (net.mahan.io).
-              Two line-blocks are kept (link + spacer) so the card keeps its front-side size. */}
-          <Container className='middle' onClick={this.stopPropagation}>
-            <a href="https://net.mahan.io" style={{ display: 'inline-block', marginTop: '0.5em', fontWeight: 700 }}>&gt;CONTINUE</a>
-          </Container>
-          <br/><br/>
-          <Container className='middle'>&nbsp;</Container>
-        </Card.Content>
-      );
-    }
+    // Both faces share one structure: the name block, then a fixed-height row. The back puts the
+    // single way in (net.mahan.io) in that row; the front leaves it empty. The card height never changes.
     return (
       <Card.Content textAlign='center'>
         <Header>
-					Michael Mahan
+          Michael Mahan
           <Header.Subheader content="A Developer"/>
-					&nbsp;
-          <br/><br/>
-					&nbsp;
         </Header>
+        <div style={{ height: '3.5em', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {flipped && (
+            <a href="https://net.mahan.io" onClick={this.stopPropagation}
+               style={{ fontWeight: 700, fontSize: '1.15em', letterSpacing: '0.04em' }}>&gt;CONTINUE</a>
+          )}
+        </div>
       </Card.Content>
     );
   }
