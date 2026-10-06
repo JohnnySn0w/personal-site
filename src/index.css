@@ -55,4 +55,13 @@ div.card > .ui.card > .content.card-rows {
   justify-content: center;
 }
 .card-row-top .ui.header { margin: 0; }
-.card-icon { display: block; image-rendering: pixelated; }
+.card-icon { display: block; overflow: visible; }
+/* The door leaf: closed it fills the doorway; open it folds out past the hinge (x=7) into a
+   narrow leaf whose top and bottom edges slant like "/" (Michael TG 11160). */
+.card-icon .door {
+  transform-box: view-box;
+  transform-origin: 7px 8px;
+  transition: transform 0.7s cubic-bezier(.3,.7,.3,1);
+}
+.card-icon.open .door { transform: scaleX(-0.45) skewY(20deg); } /* free corner drops tan20*8 = 2.9 units: fits the 3 spare below */
+@media (prefers-reduced-motion: reduce) { .card-icon .door { transition: none; } }
