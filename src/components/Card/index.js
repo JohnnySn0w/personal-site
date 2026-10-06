@@ -40,16 +40,19 @@ export default class MainAttraction extends Component {
         </div>
         <div className='card-row'>
           <svg className='card-icon' viewBox='0 0 20 16' width='60' height='48' aria-hidden='true' shapeRendering='crispEdges'>
-            {/* stone frame of the arch */}
-            <path fill='#3a3d44' d='M6 1h8v1h2v1h1v1h1v12H2V4h1V3h1V2h2z'/>
-            {/* block joints */}
-            <path fill='#6b6f79' d='M9 1h2v2H9zM4 6h3v1H4zM13 6h3v1h-3zM2 9h4v1H2zM14 9h4v1h-4zM4 12h2v1H4zM14 12h2v1h-2zM5 3h1v1H5zM14 3h1v1h-1z'/>
-            {/* the way in */}
-            <path fill='#0d0e11' d='M8 4h4v1h1v1h1v10H6V6h1V5h1z'/>
-            {/* steps going down, narrowing into the dark */}
-            <path fill='#8a8e98' d='M6 15h8v1H6z'/>
-            <path fill='#5b5f69' d='M7 13h6v1H7z'/>
-            <path fill='#3a3d44' d='M8 11h4v1H8z'/>
+            {/* door frame */}
+            <path fill='#3a3d44' d='M6 0h10v16H6zM7 1v15h8V1z'/>
+            {/* the lit room beyond */}
+            <path fill='#d6ecff' d='M7 1h8v15H7z'/>
+            <path fill='#bcdcf7' d='M7 14h8v2H7z'/>
+            {/* two racks */}
+            <path fill='#23262c' d='M8 3h3v12H8zM12 3h2v12h-2z'/>
+            {/* status lights */}
+            <path fill='#3ddc84' d='M9 4h1v1H9zM9 7h1v1H9zM12 5h1v1h-1zM9 11h1v1H9zM12 10h1v1h-1z'/>
+            <path fill='#3df0ff' d='M10 5h1v1h-1zM10 9h1v1h-1zM13 7h1v1h-1zM13 12h1v1h-1zM10 13h1v1h-1z'/>
+            {/* the door, swung open toward us */}
+            <path fill='#5b5f69' d='M3 2h1V1h2v15H4v-1H3z'/>
+            <path fill='#8a8e98' d='M4 8h1v1H4z'/>
           </svg>
         </div>
         <div className='card-row'>
