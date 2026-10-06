@@ -21,11 +21,6 @@ export default class MainAttraction extends Component {
     });
   }
 
-  sendEmail() {
-    window.location = 'mailto:mmahan@pm.me';
-    return false;
-  }
-
   stopPropagation(event) {
     event.stopPropagation();
   }
